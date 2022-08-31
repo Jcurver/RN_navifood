@@ -3,11 +3,9 @@ import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, Text, View } from "react-native";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator, StackNavigationProp } from "@react-navigation/stack";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Category from "./models/category";
-import Meal from "./models/meal";
 import MealDetailScreen from "./screens/MealDetailScreen";
 
 export type RootStackParamList = {

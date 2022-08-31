@@ -7,6 +7,7 @@ import Subtitle from "../components/MealDetail/Subtitle";
 import MealDetails from "../components/MealDetails";
 import { fpx, hpx } from "../customStyle/px";
 import { MEALS } from "../data/dummy-data";
+import IconButton from "../components/IconButton";
 
 type Props = NativeStackScreenProps<RootStackParamList, "MealDetail">;
 
@@ -22,10 +23,10 @@ const MealDetailScreen = ({ route, navigation }: Props) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <Button title="Tap me!" onPress={headerButtonPressHandler} />;
+        return <IconButton icon="star" color="white" onPress={headerButtonPressHandler} />;
       },
     });
-  }, [navigation,headerButtonPressHandler]);
+  }, [navigation, headerButtonPressHandler]);
 
   return (
     <ScrollView style={S.rootContainer}>
